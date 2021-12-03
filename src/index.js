@@ -38,7 +38,8 @@ class Board {
     publish = function (article) {
         if (this.register) {
             this.article = article;
-            article.id = `${this.name}-${2}`;
+            let ranNum = Math.floor(Math.random());
+            article.id = `${this.name}-${ranNum}`;
             this.articles.push(article);
             article.register = true;
             let date = new Date();
